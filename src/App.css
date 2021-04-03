@@ -1,12 +1,3 @@
-.body {
-  text-align: center;
-  background-color: #282c34;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,9 +5,8 @@
   }
 }
 
-.App-header {
+.App{
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,15 +15,13 @@
   color: white;
 }
 
-.App-link {
+.navbar {
   color: #61dafb;
+  background-color: #282c34;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-light .navbar-brand {
+  color: #61dafb !important;
+  font-size: 50px;
+  font-weight: 100;
 }

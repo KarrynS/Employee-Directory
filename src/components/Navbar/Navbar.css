@@ -1,0 +1,10 @@
+.navbar {
+    color: #61dafb;
+    background-color: #282c34;
+  }
+  
+  .navbar-light .navbar-brand {
+    color: #61dafb;
+    font-size: 50px;
+    font-weight: 100;
+  }

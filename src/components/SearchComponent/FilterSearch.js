@@ -29,9 +29,9 @@ class FilterSearch extends Component {
     
     render() {
         return (
-            <div>
+            <div className="filterSearch">
                 <select className="form-select" aria-label="Default select example">
-                <option selected>Filter employees by</option>
+                <option selected>Filter by</option>
                 <option value={this.state.location}>Location</option>
                 <option value={this.state.occupation}>Occupation</option>
                 </select>

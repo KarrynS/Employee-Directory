@@ -39,6 +39,7 @@ class SearchName extends Component {
                         type="text"
                         placeholder="Search by employee name"
                         />
+                
                     <button onClick={this.handleFormSubmit}>Search</button>
                 </form>
             </div>

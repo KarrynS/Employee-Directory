@@ -1,6 +1,4 @@
 import React from "react";
-import FilterSearch from "../SearchComponent/FilterSearch";
-import SearchName from "../SearchComponent/SearchName";
 
 function Navbar() {
     return (
@@ -10,13 +8,6 @@ function Navbar() {
                     <span className="navbar-brand mb-0">Employee Directory</span>
                 </div>
             </nav>
-
-            <div>
-            <SearchName/>
-            </div>
-            <div>
-            <FilterSearch/>
-            </div>
         </div>
 
     )

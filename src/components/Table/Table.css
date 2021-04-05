@@ -1,0 +1,10 @@
+.table {
+    color: white !important;
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+th {
+    color: #61dafb;
+}

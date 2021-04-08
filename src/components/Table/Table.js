@@ -13,6 +13,7 @@ function Table(props) {
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
                 <th scope="col">Location</th>
+                <th scope="col">Gender</th>
               </tr>
             </thead>
           <tbody>
@@ -23,9 +24,9 @@ function Table(props) {
                 first={employee.name.first}
                 last={employee.name.last}
                 location={employee.location.city}
-                role={employee.role}
+                gender={employee.gender}
                 email={employee.email}
-                phone={employee.phone}
+                phone={employee.cell}
                />
             ))}
            

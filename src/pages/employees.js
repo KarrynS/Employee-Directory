@@ -5,11 +5,10 @@ import API from "../utils/API";
 
 class Employees extends Component {
     state = {
-        location: "",
-        occupation: "",
         name: "",
         results: []
     }
+    
 
     handleInputChange = event => {
         const value = event.target.value;
@@ -30,9 +29,11 @@ class Employees extends Component {
 
     searchEmployee = (query) => {
         API.employeeSearch(query)
-        .then(res =>
-            this.setState({ results: res.data.results }))
-            .then(res => console.log(res))
+        .then(res => {
+            console.log(res)
+            console.log(res.data.results[0].dob.age)
+            this.setState({ results: res.data.results })
+        })
         .catch(err => console.log(err));
     };
 
@@ -42,9 +43,7 @@ class Employees extends Component {
                 <Filter
                 name={this.state.name}
                 handleInputChange={this.handleInputChange}
-                location={this.state.location} 
-                occupation={this.state.occupation} 
-                  
+                // location={this.state.location} 
                 handleSortSubmit={this.handleSortSubmit}
                 /> 
                

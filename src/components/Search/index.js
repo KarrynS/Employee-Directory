@@ -12,21 +12,15 @@ function Filter(props) {
                         onChange={props.handleInputChange}
                         type="text"
                         placeholder="Search by name"
-                        />
+                    />
+                    <select className="form-select" onChange={props.handleSortSubmit} aria-label="Default select example">
+                        <option selected>Sort by</option>
+                        <option value="location">Location</option>
+                        <option value="age">Gender</option>
+                    </select>
                 </form>
             </div>
-            
-            <div className="filterSearch">
-                <select className="form-select" onChange={props.handleSortSubmit} aria-label="Default select example">
-                    <option selected>Sort by</option>
-                    <option value={props.location}>Location</option>
-                    <option value={props.occupation}>Occupation</option>
-                </select>
-            </div>
         </>
-        
-
-        
     )
 }
 

@@ -1,12 +1,5 @@
-.filterSearch {
-    text-align: center;
-    justify-content: center;
-    height: 50px;
-    margin-top: 20px;
-
-}
-
 .form-select {
+text-align: center;
 background-color: fuchsia;
 font-style: "Segoe UI";
 height: 50px;
@@ -16,6 +9,7 @@ padding: 3px 10px;
 border: 1px fuchsia solid;
 justify-content: center;
 color: white;
+margin-left: 20px;
 }
 
 .aria-label{

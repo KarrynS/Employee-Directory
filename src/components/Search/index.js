@@ -15,8 +15,8 @@ function Filter(props) {
                     />
                     <select className="form-select" onChange={props.handleSortSubmit} aria-label="Default select example">
                         <option selected>Sort by</option>
-                        <option value="location">Location</option>
-                        <option value="age">Gender</option>
+                        <option value={props.location}>Location</option>
+                        <option value={props.first}>Name</option>
                     </select>
                 </form>
             </div>

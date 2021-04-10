@@ -1,14 +1,33 @@
 import React, {Component} from "react";
 import Table from "../components/Table/Table";
-import Filter from "../components/Search/index";
+import Search from "../components/Search/index";
 import API from "../utils/API";
 
 class Employees extends Component {
     state = {
-        name: "",
-        results: []
+        search: "",
+        results: [],
+        resultsSearch: [],
     }
     
+    componentDidMount() {
+        this.searchEmployee();
+    }
+
+    searchEmployee = () => {
+        API.employeeSearch()
+        .then(res => {
+            // console.log(res)
+            // console.log((res.data.results[0].dob.age))
+            this.setState({ 
+                results: res.data.results,
+                resultsSearch: res.data.results,
+          
+            })
+        })
+        .catch(err => console.log(err));
+    };
+
     handleInputChange = event => {
         const value = event.target.value;
         const name = event.target.name;
@@ -16,37 +35,46 @@ class Employees extends Component {
         this.setState({
             [name]: value
         });
-    };
 
-    handleSortSubmit = event => {
-        event.preventDefault();
-    }
-
-    componentDidMount() {
-        this.searchEmployee();
-    }
-
-    searchEmployee = (query) => {
-        API.employeeSearch(query)
-        .then(res => {
-            console.log(res)
-            console.log(res.data.results[0].dob.age)
-            this.setState({ results: res.data.results })
+        const employeeSearch = this.state.resultsSearch.filter((employee) => {
+            return employee.name.first.toLowerCase().includes(value.toLowerCase()) || employee.name.last.toLowerCase().includes(value.toLowerCase())
         })
-        .catch(err => console.log(err));
+        this.setState({ results : employeeSearch})
+        console.log("searchInput", employeeSearch)
     };
+
+
+    handleSortBtn = () => {
+        const resultsbyName = this.state.results.sort((a,b) => {
+            return a.name.first.localeCompare(b.name.first)
+        })
+        this.setState({ results: resultsbyName })
+        console.log("resultsName", resultsbyName)
+    }
+
+    handleSortLoc = () => {
+        const resultsbyLoc = this.state.results.sort((a,b) => {
+            return a.location.localCompare(b.location)
+        })
+        this.setState({ results: resultsbyLoc })
+        console.log("resultsLoc", resultsbyLoc)
+    }
 
     render() {
         return (
             <>  
-                <Filter
-                name={this.state.name}
+                <Search
+                search={this.state.search}
+                results={this.state.results}
                 handleInputChange={this.handleInputChange}
-                // location={this.state.location} 
-                handleSortSubmit={this.handleSortSubmit}
                 /> 
                
-                <Table results={this.state.results}/> 
+                <Table 
+                results={this.state.results}
+                search={this.state.search}
+                handleSortBtn={this.handleSortBtn}
+                handleSortLoc={this.handleSortLoc}
+                /> 
             </>
         )
     }

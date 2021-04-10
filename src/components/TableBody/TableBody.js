@@ -14,7 +14,7 @@ function TableBody(props) {
             <td>{props.first} {props.last}</td>
             <td>{props.phone}</td>
             <td>{props.email}</td>
-            <td>{props.location}</td>
+            <td>{props.location.city}</td>
             <td>{props.gender}</td>
         </tr>
         </>

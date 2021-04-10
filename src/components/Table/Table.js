@@ -9,10 +9,20 @@ function Table(props) {
             <thead>
               <tr>
                 <th scope="col">Image</th>
-                <th scope="col">Name</th>
+                <th scope="col"
+                  onClick={props.handleSortBtn}
+                  className="dropdown-toggle"
+                  role="button"
+                  data-toggle="dropdown"
+                >Name</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
-                <th scope="col">Location</th>
+                <th scope="col"
+                onClick={props.handleSortLoc}
+                className="dropdown-toggle"
+                role="button"
+                data-toggle="dropdown"
+                >Location</th>
               </tr>
             </thead>
           <tbody>
@@ -22,7 +32,7 @@ function Table(props) {
                 picture={employee.picture.medium}
                 first={employee.name.first}
                 last={employee.name.last}
-                location={employee.location.city}
+                location={employee.location}
                 email={employee.email}
                 phone={employee.cell}
                />

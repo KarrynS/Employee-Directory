@@ -1,27 +1,28 @@
 import React from "react";
 import "./index.css";
 
-function Filter(props) {
+function Search(props) {
     return (
         <>
             <div className="searchForm">
                 <form className="form">
                     <input
-                        value={props.name}
-                        name="name"
+                        value={props.search}
+                        name="search"
                         onChange={props.handleInputChange}
                         type="text"
                         placeholder="Search by name"
                     />
-                    <select className="form-select" onChange={props.handleSortSubmit} aria-label="Default select example">
+                
+                    {/* <select className="form-select" onClick={props.handleSortBtn} aria-label="Default select example">
                         <option selected>Sort by</option>
                         <option value={props.location}>Location</option>
                         <option value={props.first}>Name</option>
-                    </select>
+                    </select> */}
                 </form>
             </div>
         </>
     )
 }
 
-export default Filter;
+export default Search;

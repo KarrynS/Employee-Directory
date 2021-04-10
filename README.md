@@ -2,7 +2,7 @@
 
 ## Overview
 
-A React application that allows managers to view data about their employees by generating an employee directory. 
+A React application that allows managers to view information about their employees by generating an employee directory. 
 
 ---
 | Table of Contents |
@@ -17,7 +17,7 @@ A React application that allows managers to view data about their employees by g
 
 ## Description
 
-Users will be able search for a particular employee and also filter by location. 
+When presented with a table of employess users will be able search for a particular employee in addition to sorting employees  by name or location. 
 
 Technologies utilised: React, Axios, Bootstrap
 
@@ -27,12 +27,13 @@ Download the pacakge and run npm i in command line to install all dependencies.
 
 ## Usage
 
-Deployed application here: 
+Deployed application here:  https://karryns.github.io/Employee-Directory/
 
 Application should appear as follows: 
-<img src="">
+<img src="./public/ED.png">
 <br>
-
+<img src="./public/ED-sort.png">
+<br>
 ## License 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

@@ -54,7 +54,7 @@ class Employees extends Component {
 
     handleSortLoc = () => {
         const resultsbyLoc = this.state.results.sort((a,b) => {
-            return a.location.localCompare(b.location)
+            return a.location.localeCompare(b.location)
         })
         this.setState({ results: resultsbyLoc })
         console.log("resultsLoc", resultsbyLoc)
@@ -64,14 +64,14 @@ class Employees extends Component {
         return (
             <>  
                 <Search
-                search={this.state.search}
+                // search={this.state.search}
                 results={this.state.results}
                 handleInputChange={this.handleInputChange}
                 /> 
                
                 <Table 
                 results={this.state.results}
-                search={this.state.search}
+                // search={this.state.search}
                 handleSortBtn={this.handleSortBtn}
                 handleSortLoc={this.handleSortLoc}
                 /> 

@@ -32,7 +32,7 @@ Deployed application here:  https://karryns.github.io/Employee-Directory/
 Application should appear as follows: 
 <img src="./public/ED.png">
 <br>
-<img src="./public/ED-sort.png">
+<img src="./public/ED_sort.png">
 <br>
 ## License 
 

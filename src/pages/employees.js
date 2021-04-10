@@ -44,7 +44,7 @@ class Employees extends Component {
     };
 
 
-    handleSortBtn = () => {
+    handleSortName = () => {
         const resultsbyName = this.state.results.sort((a,b) => {
             return a.name.first.localeCompare(b.name.first)
         })
@@ -72,7 +72,7 @@ class Employees extends Component {
                 <Table 
                 results={this.state.results}
                 // search={this.state.search}
-                handleSortBtn={this.handleSortBtn}
+                handleSortNam={this.handleSortName}
                 handleSortLoc={this.handleSortLoc}
                 /> 
             </>

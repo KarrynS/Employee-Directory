@@ -10,7 +10,7 @@ function Table(props) {
               <tr>
                 <th scope="col">Image</th>
                 <th scope="col"
-                  onClick={props.handleSortBtn}
+                  onClick={props.handleSortName}
                   className="dropdown-toggle"
                   role="button"
                   data-toggle="dropdown"

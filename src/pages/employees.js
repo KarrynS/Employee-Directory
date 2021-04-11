@@ -22,7 +22,6 @@ class Employees extends Component {
             this.setState({ 
                 results: res.data.results,
                 resultsSearch: res.data.results,
-          
             })
         })
         .catch(err => console.log(err));
@@ -45,6 +44,7 @@ class Employees extends Component {
 
 
     handleSortName = () => {
+
         const resultsbyName = this.state.results.sort((a,b) => {
             return a.name.first.localeCompare(b.name.first)
         })
@@ -52,13 +52,13 @@ class Employees extends Component {
         console.log("resultsName", resultsbyName)
     }
 
-    handleSortLoc = () => {
-        const resultsbyLoc = this.state.results.sort((a,b) => {
-            return a.location.localeCompare(b.location)
-        })
-        this.setState({ results: resultsbyLoc })
-        console.log("resultsLoc", resultsbyLoc)
-    }
+    // handleSortLoc = () => {
+    //     const resultsbyLoc = this.state.results.sort((a,b) => {
+    //         return a.location.localeCompare(b.location)
+    //     })
+    //     this.setState({ results: resultsbyLoc })
+    //     console.log("resultsLoc", resultsbyLoc)
+    // }
 
     render() {
         return (
@@ -72,8 +72,8 @@ class Employees extends Component {
                 <Table 
                 results={this.state.results}
                 // search={this.state.search}
-                handleSortNam={this.handleSortName}
-                handleSortLoc={this.handleSortLoc}
+                handleSortName={this.handleSortName}
+                // handleSortLoc={this.handleSortLoc}
                 /> 
             </>
         )

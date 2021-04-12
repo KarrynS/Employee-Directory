@@ -19,7 +19,7 @@ function Table(props) {
                 <th scope="col">Email</th>
                 <th scope="col"
                 onClick={props.handleSortLoc}
-                className="dropdown-toggle"
+                // className="dropdown-toggle"
                 role="button"
                 data-toggle="dropdown"
                 >Location</th>

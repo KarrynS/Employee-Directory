@@ -17,7 +17,7 @@ A React application that allows managers to view information about their employe
 
 ## Description
 
-When presented with a table of employess users will be able search for a particular employee in addition to sorting employees  by name or location. 
+When presented with a table of employess users will be able search for a particular employee in addition to sorting employees by name.
 
 Technologies utilised: React, Axios, Bootstrap
 
